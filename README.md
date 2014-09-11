@@ -22,6 +22,23 @@ Fill it with following code and change the values to fit your configuration:
 ?>
 ```
 
+Database schema:
+
+```sql
+# Dump of table links
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `links`;
+
+CREATE TABLE `links` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `url_shortened` varchar(2000) DEFAULT NULL,
+  `create_date` datetime DEFAULT NULL,
+  `expire_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+
 Next, run those two lines in your terminal, in application root:
 
 ```bash
